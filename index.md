@@ -1,37 +1,62 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Select2 - jQuery</title>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="assets/img/lp3i_icon.ico">
 
-You can use the [editor on GitHub](https://github.com/aliffikry1398/jQuery-Select2/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="assets/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-### Markdown
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+<div class="container mt-5">
+	<div class="row">
+		<div class="col-md">
+			<div class="form-group">
+				<h4>Select2</h4>
+				<label>Nama Barang</label>
+				<select class="form-control" id="selectbrg">
+					<option value="">--Select Barang--</option>
+					<option value="Laptop">Laptop</option>
+					<option value="Mouse">Mouse</option>
+					<option value="Keyboard">Keyboard</option>
+				</select>
+			</div>
+		</div>
 
-```markdown
-Syntax highlighted code block
+		<div class="col">
+			<div class="form-group">
+				<h4>Multiple Select</h4>
+				<label>Nama Barang</label>
+				<select class="form-control" id="multiple" multiple="multiple">
+					<option value="">--Select Barang--</option>
+					<option value="Laptop">Laptop</option>
+					<option value="Mouse">Mouse</option>
+					<option value="Keyboard">Keyboard</option>
+				</select>
+			</div>
+		</div>
+	</div>
+</div>
 
-# Header 1
-## Header 2
-### Header 3
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
 
-- Bulleted
-- List
+<script>
+	$("#selectbrg").select2();
+	$("#multiple").select2({
+		placeholder: 'select barang',
+		maximumSelectionLength: 2
+	});
+</script>
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/aliffikry1398/jQuery-Select2/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+</body>
+</html>
